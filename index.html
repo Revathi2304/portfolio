@@ -8,10 +8,6 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
 <!-- Nav -->
 <nav>
   <a href="#" class="nav-logo">RR</a>
@@ -115,6 +111,10 @@
         <span class="value">linkedin.com/in/revathi04</span>
       </div>
       <div class="detail-row">
+        <span class="label">Github</span>
+        <span class="value">github.com/Revathi2304</span>
+      </div>
+      <div class="detail-row">
         <span class="label">Degree</span>
         <span class="value">MCA (Pursuing)</span>
       </div>
@@ -124,7 +124,7 @@
       </div>
       <div class="detail-row">
         <span class="label">Status</span>
-        <span class="value" style="color: var(--accent);">Open to Internships</span>
+        <span class="value" style="color: var(--accent);">Open to Internship and job</span>
       </div>
     </div>
   </div>
@@ -249,7 +249,7 @@
         <div class="exp-duration" style="margin-top:0.3rem">Trichy, India</div>
       </div>
       <div>
-        <div class="exp-role">Web Development Intern</div>
+        <div class="exp-role">Web Design and development Intern</div>
         <ul class="exp-points">
           <li>Completed a 20-day intensive web development internship, deepening proficiency in core front-end technologies</li>
           <li>Gained hands-on experience in a professional web development environment with real project exposure</li>
@@ -297,10 +297,11 @@
 <section id="contact" class="contact-section">
   <div class="section-label" style="justify-content:center">Get In Touch</div>
   <h2 class="section-title" style="font-size:clamp(2rem,4vw,3.5rem)">Let's work <em>together</em></h2>
-  <p style="color:var(--muted);font-size:0.8rem;max-width:400px;margin:0 auto">Currently open to internship as well as job  opportunities in web development. Feel free to reach out!</p>
+  <p style="color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto">Currently open to internship as well as job  opportunities in web development. Feel free to reach out!</p>
   <a href="mailto:revathirs2004@gmail.com" class="contact-email">revathirs2004@gmail.com</a>
   <div class="contact-links">
-    <a href="https://www.linkedin.com/in/revathi04" class="contact-link" target="_blank">↗ LinkedIn</a>
+<a href="https://www.linkedin.com/" class="contact-link" target="_blank" rel="noopener noreferrer">
+  ↗ LinkedIn </a>
     <a href="tel:9597077918" class="contact-link">📞 9597077918</a>
     <a href="mailto:revathirs2004@gmail.com" class="contact-link">✉ Email </a>
   </div>
@@ -313,35 +314,6 @@
 </footer>
 
 <script>
-  // Custom cursor
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.left = mx - 5 + 'px';
-    cursor.style.top = my - 5 + 'px';
-  });
-  function animRing() {
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    ring.style.left = rx - 18 + 'px';
-    ring.style.top = ry - 18 + 'px';
-    requestAnimationFrame(animRing);
-  }
-  animRing();
-
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.style.transform = 'scale(2)';
-      ring.style.transform = 'scale(1.5)';
-    });
-    el.addEventListener('mouseleave', () => {
-      cursor.style.transform = 'scale(1)';
-      ring.style.transform = 'scale(1)';
-    });
-  });
-
   // Scroll reveal
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
